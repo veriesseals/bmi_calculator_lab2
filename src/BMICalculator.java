@@ -11,9 +11,19 @@ public class BMICalculator {
     // A no-argument constructor that initializes the four properties to some initial values
     // -------------------------------------------------
 
-    public double calculateBmiImperial(double weightInPounds, double heightInInches){
-        return (703 * weightInPounds) / (heightInInches * heightInInches);
+    // Utility classes
+    // -------------------------------------------------------
 
+    // Imperial Calculation Method
+    // ------------------------------------------------
+    public double calculateBmiImperial(double weightInPounds, double heightInInches) {
+        return weightInPounds / (heightInInches * heightInInches) * 703;
+    }
+
+    // Metric Calculation Method
+    // -------------------------------------------------
+    public double calculateBmiMetric(double weightInKilograms, double heightInMeters) {
+        return weightInKilograms / (heightInMeters * heightInMeters);
     }
 
 
